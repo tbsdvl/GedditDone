@@ -50,6 +50,6 @@ GedditDone- Post Delete Page
 Open Skills
 
 # Tasks Breakdown
-Hanna-
-Triston-
-Myrla-
+Hanna:  Models-User, Routes-Index, View-All(TBD) 
+Triston:    Models-Jobs, Routes-User, View-All(TBD) 
+Myrla:  Models-Index, Routes-Jobs, View-All(TBD) 
