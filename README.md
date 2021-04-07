@@ -13,7 +13,10 @@ income.
 
 
 # Wireframe/Outline
+
+<img src='./Assets/gedditdone-wireframe.png' alt="photo holder"></img>
 GedditDone-Homepage
+
 	Marketing-Quotes
 		“Looking for someone to help you with landscaping?”
 		“Maybe you need a babysitter?”
