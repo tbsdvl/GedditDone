@@ -1,6 +1,5 @@
 const User = require('./User');
 const Jobs = require('./Jobs');
-
 User.hasMany(Jobs, {
     foreignKey: 'user_id',
     onDelete: 'CASCADE'
@@ -10,8 +9,4 @@ User.hasMany(Jobs, {
     foreignKey: 'user_id'
   });
   
-
   module.exports = { User, Jobs };
-
- 
-
