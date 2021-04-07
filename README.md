@@ -47,7 +47,8 @@ GedditDone- Post Delete Page
 
 
 # APIs
-Open Skills
+Open Skills API
+indeed open API
 
 # Tasks Breakdown
 Hanna:  Models-User, Routes-Index, View-All(TBD) 
