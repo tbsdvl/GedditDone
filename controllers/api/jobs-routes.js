@@ -6,13 +6,12 @@ const { Jobs, User } = require("../../models");
 
 router.get("/", async (req, res) => {
   try {
-    const jobsData = await Jobs.findAll({
-      include: [{ model: User }],
-    });
-    const jobs = jobsData.map((job) => job.get({ plain: true }));
-    res.render("jobs", { jobs });
+    const jobsData = await Jobs.findAll();
+    // const jobs = jobsData.map((job) => job.get({ plain: true }));
+    // res.render("jobs", { jobs });
+    res.status(200).json(jobsData);
   } catch (err) {
-    console / log(err);
+    if (err) throw err;
     res.status(500).json(err);
   }
 });
