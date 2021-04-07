@@ -1,0 +1,30 @@
+{
+  "name": "GedditDone",
+  "version": "1.0.0",
+  "description": "# Description This is an application that connects employers and job seekers. This app will allow the employers to view a list of services that job seekers provide. The employers may connect with the job seeker by the email provided on their service post.  The job seekers will be able to create an account profile, which will include a current photo of themselves. This will help the employer to identify who they are hiring once they show up to the work location.  The job seeker will complete a list of questions and fill out the type of service they provide. This will include job title, experience level, a list of skills, their contact email address, and the cost of the service either by task or per hour. The job seeker will also be able to select if their services are for residential, business, or both.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tbsdvl/GedditDone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tbsdvl/GedditDone/issues"
+  },
+  "homepage": "https://github.com/tbsdvl/GedditDone#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.0",
+    "express-session": "^1.17.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.2"
+  }
+}
