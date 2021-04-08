@@ -12,6 +12,7 @@ header {
     position: fixed;
     background-color: #A52F00;
     width: 100%;
+    z-index: 1;
 }
 
 header h1 {
@@ -65,7 +66,9 @@ nav ul a {
 }
 
 .jobpost {
-    border:  2px solid #000;
+    border:  3px solid rgb(58, 58, 58);
+    border-radius: 3px;
+    border-style:inset;
     padding: 0;
 }
 
@@ -78,6 +81,7 @@ nav ul a {
 
 .postcontent {
     background-color: #ffffff;
+    opacity: 0.85;
     padding-top: 20px;
     padding-bottom: 15px;
 }
