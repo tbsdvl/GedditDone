@@ -6,5 +6,21 @@
     "state": "Arizona",
     "description": "Example description",
     "salary": "50000.00"
+  },
+  {
+    "jobtitle": "Plumber",
+    "company": "Clean Corp.",
+    "city": "Tucson",
+    "state": "Arizona",
+    "description": "Example description",
+    "salary": "50000.00"
+  },
+  {
+    "jobtitle": "Babysitter",
+    "company": "NA",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "description": "Example description",
+    "salary": "30000.00"
   }
 ]
