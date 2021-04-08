@@ -1,0 +1,24 @@
+<div class="job-details-container">
+  <div class="card-header col-md-10">
+    <h2>
+    Job Listing
+    </h2>
+  </div>
+  <section class="card">
+  <!-- The contents of this card links to the jobs page using the user ID -->
+  <a href="/jobs/{{id}}">
+    <!-- The card contains the jobstitle as the card header -->
+    <header>{{jobtitle}}</header>
+    <!-- The card contains the first user of the jobs -->
+    <img src="/images/{{user.[0].firstname}}{{user.[0].lastname}}" alt="{{user.[0].email}}">
+  </a>
+</section>
+   <section class="user">
+  <img src="/images/{{user.firstname}}{{user.lastname}}" alt="{{user.email}}">
+  <div class="user-details">
+    
+  </div>
+</section>
+    </div>
+  </div>
+</div>

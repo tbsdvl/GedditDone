@@ -4,5 +4,35 @@
     "lastname": "User",
     "email": "fake@email.com",
     "password": "password"
+  },
+  {
+    "firstname": "Sal",
+    "lastname": "Ortega",
+    "email": "sal@hotmail.com",
+    "password": "password12345"
+  },
+  {
+    "firstname": "Lernantino",
+    "lastname": "Miller",
+    "email": "lernantino@gmail.com",
+    "password": "password12345"
+  },
+  {
+    "firstname": "Amiko",
+    "lastname": "Nguyen",
+    "email": "amiko2k20@aol.com",
+    "password": "password12345"
+  },
+  {
+    "firstname": "Jordan",
+    "lastname": "Smith",
+    "email": "jordan99@msn.com",
+    "password": "password12345"
+  },
+  {
+    "firstname": "Blake",
+    "lastname": "Olsen",
+    "email": "the_blake@yahoo.com",
+    "password": "password12345"
   }
 ]
