@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User } = require('../../models');
+const validator = require('validator');
 
 router.post('/', async (req, res) => {
   try {
@@ -20,6 +21,9 @@ router.post('/login', async (req, res) => {
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });
 
+    // Backup email validator in case code breaks
+    // validator.isEmail(userData);
+
     if (!userData) {
       res
         .status(400)
@@ -28,6 +32,9 @@ router.post('/login', async (req, res) => {
     }
 
     const validPassword = await userData.checkPassword(req.body.password);
+
+    // Backup password validator in case code breaks
+    // const validPassword = validator.isStrongPassword(req.body.password);
 
     if (!validPassword) {
       res
