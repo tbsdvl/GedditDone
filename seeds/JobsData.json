@@ -1,26 +1,27 @@
 [
-  {
-    "jobtitle": "Carpenter",
-    "company": "Example Corp.",
-    "city": "Phoenix",
-    "state": "Arizona",
-    "description": "Example description",
-    "salary": "50000.00"
-  },
-  {
-    "jobtitle": "Plumber",
-    "company": "Clean Corp.",
-    "city": "Tucson",
-    "state": "Arizona",
-    "description": "Example description",
-    "salary": "50000.00"
-  },
-  {
-    "jobtitle": "Babysitter",
-    "company": "NA",
-    "city": "Phoenix",
-    "state": "Arizona",
-    "description": "Example description",
-    "salary": "30000.00"
-  }
-]
+    {
+      "jobtitle": "Carpenter",
+      "company": "Example Corp.",
+      "city": "Phoenix",
+      "state": "Arizona",
+      "description": "Installing wooden structures such as roofing frames, rafters, partitions, joists and stud work.",
+      "salary": "30.00"
+    },
+    {
+      "jobtitle": "Plumber",
+      "company": "Clean Corp.",
+      "city": "Tucson",
+      "state": "Arizona",
+      "description": "Install, repair, and maintain pipes, valves, fittings, drainage systems, and fixtures in commercial and residential structures.",
+      "salary": "30.00"
+    },
+    {
+      "jobtitle": "Babysitter",
+      "company": "NA",
+      "city": "Phoenix",
+      "state": "Arizona",
+      "description": "Ensure a safe environment, preparing and giving meals, bathing and dressing children, administering medicine, and disciplining children when necessary.",
+      "salary": "15.00"
+    }
+  ]
+  
