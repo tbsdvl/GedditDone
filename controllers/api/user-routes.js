@@ -1,6 +1,10 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 const validator = require('validator');
+const passport = require("../config/passport");
+
+
+
 
 router.post('/', async (req, res) => {
   try {
