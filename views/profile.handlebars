@@ -6,7 +6,7 @@
 
 <div class="row mt-4">
   <div class="col-md-6">
-    <h3>Create a New Job Post:</h3>
+    <h3>Create a New Job Posting:</h3>
 
     <form class="form new-job-form">
       <div class="form-group">
@@ -14,7 +14,7 @@
         <input class="form-input" type="text" id="job-title" name="job-title" />
       </div>
       <div class="form-group">
-        <label for="salary">Salary($):</label>
+        <label for="salary">Rate/Hour($):</label>
         <input class="form-input" type="number" id="salary" name="salary" />
       </div>
       <div class="form-group">
@@ -22,6 +22,14 @@
         <textarea class="form-input" id="job-desc" name="job-desc"></textarea>
       </div>
       <div class="form-group">
+        <label for="city">City:</label>
+        <input class="form-input" type="text" id="theCity" name="city" />
+      </div>
+      <div class="form-group">
+        <label for="state">State:</label>
+        <input class="form-input" type="text" id="state" name="state" />
+      </div>
+      <div class="create-form">
         <button type="submit" class="btn btn-primary">Create</button>
       </div>
     </form>
@@ -36,7 +44,7 @@
       <div class="col-md-8">
         <h4><a href="/job/{{job.id}}">{{job.jobtitle}}</a></h4>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 delete-form">
         <button class="btn btn-sm btn-danger" data-id="{{job.id}}">DELETE</button>
       </div>
     </div>
