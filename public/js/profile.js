@@ -28,7 +28,7 @@ const newFormHandler = async (event) => {
     if (event.target.hasAttribute('data-id')) {
       const id = event.target.getAttribute('data-id');
   
-      const response = await fetch(`/api/job/${id}`, {
+      const response = await fetch(`/api/jobs/${id}`, {
         method: 'DELETE',
       });
   
@@ -44,9 +44,9 @@ const newFormHandler = async (event) => {
     .getElementById('create-form')
     .addEventListener('submit', newFormHandler);
   
-  // document
-  //   .querySelector('.delete-form')
-  //   .addEventListener('DELETE', delButtonHandler);
+  document
+    .querySelector('.job-list')
+    .addEventListener('click', delButtonHandler);
   
   
     

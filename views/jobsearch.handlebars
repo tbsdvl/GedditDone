@@ -1,0 +1,37 @@
+<div class="container mb-3">
+
+    <div class="row">
+      <div class="col-md-2">
+      </div>
+
+      <div class="col-md-8">
+        {{!-- Search bar --}}
+        <form class="input-group mb-3" id="searchForm">
+          <input type="text" class="form-control" id="searchInput" placeholder="Search role, technology, company or job location..">
+          <button type="submit" value="Search" id="searchJob"
+            class="btn btn-md btn-info align-items-center">Search</button>
+        </form>
+      </div>
+
+      <div class="col-md-2">
+      </div>
+    </div>
+  </div>
+
+  <br><br>
+  <div class="row mr-2 ml-2" id="jobs">
+    <div class="col-md-2"></div>
+
+    <div class="col-md-8 col-lg-8 align-items-center">
+      {{!-- Job list for searched keyword --}}
+      {{#each job}}
+         {{>job-details}}
+      {{/each}}
+    </div>
+
+    <div class="col-md-2"></div>
+  </div>
+</div>
+</div>
+
+<script src="/js/jobsearch.js"></script>

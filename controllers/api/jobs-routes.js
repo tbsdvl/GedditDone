@@ -32,27 +32,18 @@ router.get('/', withAuth, async (req, res) => {
         res.status(500).json(err);
     }
 });
-router.post('/:id', withAuth, async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
     try {
         const newJob = await Jobs.create({
-            where: { jobtitle, company, city, state, description, salary} = req.body,
+            ...req.body,
             user_id: req.session.user_id,
-        
-        });
-        jobtitle=uppercase(job);
-        company = company.toLowerCase().replace(/,[ ]+/g, ",");
-        company=uppercase(company);
-        city = city.toLowerCase().replace(/,[ ]+/g, ",");
-        city=uppercase(company);
-        state = company.toLowerCase().replace(/,[ ]+/g, ",");
-        state=uppercase(company);
-        
-        res.redirect('/jobs');
-        res.status(200).json(newJob);
-    } catch (err) {
-        res.status(400).json(err);
-    }
-});
+          });
+      
+          res.status(200).json(newJob);
+        } catch (err) {
+          res.status(400).json(err);
+        }
+      });
 router.get('/:id', withAuth, async (req, res) => {
     try {
         const jobsData = await Jobs.findByPk({

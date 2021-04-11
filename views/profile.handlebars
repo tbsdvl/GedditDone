@@ -25,7 +25,7 @@
     {{#each jobs as |job|}}
     <div class="row mb-2">
       <div class="col-md-8">
-        <h4><a href="/job/{{job.id}}">{{job.jobtitle}}</a></h4>
+        <h4><a href="/api/jobs/{{job.id}}">{{job.jobtitle}}</a></h4>
       </div>
       <div class="col-md-4 delete-form">
         <button class="btn btn-sm btn-danger" data-id="{{job.id}}">DELETE</button>

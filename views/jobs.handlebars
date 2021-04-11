@@ -1,27 +1,20 @@
+<form class="form job-id-form"></form>
 <div class="text-center">
-  <h2>{{jobtitle}}</h2>
+    
+  <h2 =class='title'>{{jobtitle}}</h2>
   
-  <p>{{description}}</p>
-  <div><a href="/jobs/{{id}}">
-      <header>{{firstname}}</header>
-      <ol>
-        {{#each jobs}}
-        <li>{{jobtitle}}</li>
-        <li>{{company}}</li>
-        <li>{{description}}</li>
-        <li>{{salary}}</li>
-        <li>{{user.firstname}}{{user.lastname}}</li>
-        <li>{{user.email}}</li>
-        {{/each}}
-      </ol>
-    </a></div>
-  <p>Created by {{user.firstname}}</p>
+  <p class='desc'>{{description}}</p>
+  
+  <p class='firstname'>Created by {{user.firstname}}</p>
   <p>
     <span for="img" aria-label="money">💲</span>
-   <label for="salary">Salary ($):</label>
+   <label class='salary' for="salary">Rate/Hour ($):{{salary}}</label>
     <p>For specific details on salary such as per hour or per project, please contact the job seeker via email.</p>  
   </p>
   <p>
-    <button class="btn btn-primary">Hire</button>
+    <button class="btn btn-primary" id='email'><a href="mailto:{{user.email}}">{{user.email}}</button></a>
   </p>
+   
 </div>
+</form>
+

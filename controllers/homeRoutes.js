@@ -30,7 +30,7 @@ router.get('/', async (req, res) => {
 });
 
 
-router.get('/job/:id',withAuth, async (req, res) => {
+router.get('/jobs/:id',withAuth, async (req, res) => {
   try {
     const jobsData = await job.findByPk(req.params.id, {
         attributes: ['jobtitle', 'salary', 'description', 'city', 'state'],
@@ -44,7 +44,7 @@ router.get('/job/:id',withAuth, async (req, res) => {
 
     const job = jobsData.get({ plain: true });
 
-    res.render('job', {
+    res.render('jobs', {
       ...job,
       logged_in: req.session.logged_in
     });
@@ -52,6 +52,26 @@ router.get('/job/:id',withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+// Use withAuth middleware to prevent access to route
+router.get('/profile', withAuth, async (req, res) => {
+    try {
+      // Find the logged in user based on the session ID
+      const userData = await User.findByPk(req.session.user_id, {
+        attributes: { exclude: ['password'] },
+        include: [{ model: Jobs }],
+      });
+  
+      const user = userData.get({ plain: true });
+  
+      res.render('profile', {
+        ...user,
+        logged_in: true
+      });
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
 
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
