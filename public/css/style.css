@@ -3,33 +3,28 @@
     box-sizing: border-box;
 }
 
-body{
-    background-image: url(https://images.unsplash.com/photo-1574728456255-59a286f7aaf2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 100%;
-    height: 100%;
-    padding: 1px;
-    border-radius: 25px;
-
+body {
+    padding: 0;
+    margin: 0;
 }
 
-.masthead {
+header {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    justify-content: space-between;
     background-color: #A52F00;
     width: 100%;
     height: 100px;
-
+    margin: 0;
+    padding:0;
+    z-index: 2;
 }
 
 h1 {
     color: #FFE3D8;
-    margin-left: 25px;
-}
-
-nav {
-    position: absolute;
-    right: 5em;
-
+    margin: 0;
+    padding: 30px;
 }
 
 nav ul {
@@ -41,9 +36,8 @@ nav ul {
 nav ul li {
     font-size: 20px;
     justify-content: space-around;
-    padding: 10px;
+    padding: 15px;
     margin-top: 10px;
-   
 }
 
 nav ul a {
@@ -56,17 +50,6 @@ nav ul a {
    
 }
 
-.form-group {
-    margin-left: 150px;
-    margin-bottom: 10px;
-    color: white;
-    background-color: #A52F00;
-    width: 30%;
-    padding:30px;
-    -webkit-box-shadow: 17px 15px 17px 9px rgba(0,0,0,0.73); 
-    box-shadow: 17px 15px 17px 9px rgba(0,0,0,0.73);
-}
-
 .btn {
     font-size: 20px;
     font-weight: bold;
@@ -75,9 +58,17 @@ nav ul a {
 }
 
 .jobhero {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    background-image: url(https://images.unsplash.com/photo-1574728456255-59a286f7aaf2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80);
+    padding-top: 163px;
+    padding-bottom: 154px;
 }
+
+.recentjobs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
 #job-desc{
     font-size: 20px;
     border: 2px solid black;
@@ -88,93 +79,134 @@ nav ul a {
 .jobpost {
     border-radius: 10px;
     border-style: solid;
-    padding: 20px;
-    border-width: 10px;
-    background-color:white;
-    color:black;
-    display:inline-flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+    border-width: 5px;
+    background-color: white;
+    color: black;
     width: 30%;
-    -webkit-box-shadow: 17px 15px 17px 9px rgba(0,0,0,0.73); 
-    box-shadow: 17px 15px 17px 9px rgba(0,0,0,0.73);
-    
+    -webkit-box-shadow: 17px 15px 17px 9px rgb(0 0 0 / 73%);
+    box-shadow: 17px 15px 17px 9px rgb(0 0 0 / 73%);
+    margin: 0;
 }
 
 .postheader {
     background: #ff4800;
     color:black;
-    padding: 10px;
+    padding-top: 10px;
+    margin: 0;
+    text-align: center;
+}
+
+.postheader a {
+    text-decoration: none;
+    color: #FFE3D8;
+    text-align: center;
 }
 
 .postcontent {
     background-color: #ffffff;
-    padding-top: 20px;
-    padding-bottom: 15px;
-    font-size: small;
+    /* padding-top: 20px;
+    padding-bottom: 15px; */
+    font-size: large;
     text-align: center;
+}
+
+.contentwrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .description {
     background-color: #fff;
-    
+    background-image: url(https://images.unsplash.com/photo-1496421006432-ebcd7f4ec081?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=975&q=80);
 }
+
 .mission {
-    padding: 5px;
+    padding: 0;
     font-size: large;
+    margin: 0;
+    text-align: center;
+    /* padding-bottom: 10px; */
+}
+
+.mission p {
+    margin: 0;
 }
 
 .industryphoto {
     right: 2em;
-    padding: 0;
+    /* padding-bottom: 10px; */
+    background-image: url(https://images.unsplash.com/photo-1496517463163-3550265405c1?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1567&q=80);
 }
 
 .categorywrap {
-    padding: 0px;
+    padding-top: 15px;
+    background-image: url(https://images.unsplash.com/photo-1517816743773-6e0fd518b4a6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80);
 }
 
 .categories {
     display: flex;
     flex-direction: row;
-    padding: 0px;
+    justify-content: space-evenly;
+    padding: 0;
     margin: 0;
     border: 0;
+    background-image: url(https://images.unsplash.com/photo-1517816743773-6e0fd518b4a6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80);
 }
 
 .categories li {
     list-style-type: none;
     color: #fff;
-    padding: 0px;
+    /* padding: 0px; */
+}
+
+.categorypic {
+    padding-top: 15px;
 }
 
 .gencat {
-    background-color: #A62F00;
-    font-size: 40px;
+    background-color: #79290a;
+    border: 2px solid #79290a   ;
+    border-radius: 3px;
+    font-size: 35px;
     padding: 30px;
+    margin: 0;
 }
 
 .cat1 {
-    background-color: #ac441b;
-    font-size: 40px;
+    background-color: #993913;
+    border: 2px solid #993913;
+    border-radius: 3px;
+    font-size: 35px;
     padding: 30px;
+    margin: 0;
 }
 
 .cat2 {
     background-color: #b45029;
-    font-size: 40px;
+    border: 2px solid #b45029;
+    border-radius: 3px;
+    font-size: 35px;
     padding: 30px;
+    margin: 0;
 }
 
 .cat3 {
     background-color: #c26743;
-    font-size: 40px;
+    border: 2px solid #c26743;
+    border-radius: 3px;
+    font-size: 35px;
     padding: 30px;
+    margin: 0;
 }
 
 .cat4 {
     background-color: #d68461;
-    font-size: 40px;
+    border: 2px solid #d68461;
+    border-radius: 3px;
+    font-size: 35px;
     padding: 30px;
+    margin: 0;
 }
 
 .catdesc {
@@ -192,4 +224,73 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+.form {
+    background-color: #A52F00;
+    position: relative;
+    color: white;
+    width: 30%;
+    -webkit-box-shadow: 17px 15px 17px 9px rgba(0,0,0,0.73); 
+    box-shadow: 17px 15px 17px 9px rgba(0,0,0,0.73);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.form h2 {
+    margin: 0;
+}
+
+.form label, input, button {
+    margin: 5px;
+}
+
+.loginforms {
+    padding-top: 15em;
+    padding-bottom: 16.35em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-image: url(https://images.unsplash.com/photo-1574728456255-59a286f7aaf2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80);
+}
+
+.joblist {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top left, #ff8c5e, #ffbc7d, #fff); 
+    background-repeat: no-repeat;
+}
+
+.jobcard {
+    padding: 7em;
+}
+
+.jobcard h2 {
+    background-color: #ff4800;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    border: 3px solid #000;
+    border-bottom: 5px solid #000;
+    border-radius: 2px;
+    text-align: center;
+}
+
+.liststyle {
+    list-style-type: none;
+    margin: 0;
+}
+
+.jobcard div {
+    background-color: #fff;
+    width: 60%;
+    border: 3px solid #000;
+    border-radius: 5px;
+    text-align: center;
+    font-size: large;
+    padding: 0px;
 }

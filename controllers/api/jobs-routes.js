@@ -72,6 +72,7 @@ router.get('/:id', withAuth, async (req, res) => {
         res.status(500).json(err);
     }
 });
+
 router.delete('/:id', withAuth, async (req, res) => {
     try {
         const jobData = await Jobs.destroy({
@@ -91,7 +92,6 @@ router.delete('/:id', withAuth, async (req, res) => {
         res.status(500).json(err);
     }
 });
-
 
 
 
