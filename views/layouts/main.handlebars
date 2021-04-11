@@ -11,40 +11,34 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" href="/css/style.css" />
 </head>
-<nav>
-        <ul>
-            <div class="home">
-                <li><a href="/">Home</a></li>
-            </div>
-            <div class="find-job">
-                <li><a href="/login">Find a Job</a></li>
-            </div>
-            <div class="post-job">
-                <li><a href="/login">Post a Job</a></p>
-                </li>
-            </div>
-        </ul>
-    </nav>
+
 <body>
     <header class="masthead">
         <h1>GedditDone.com</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/login">Find a Job</a></li>
+                <li><a href="/login">Post a Job</a></p>
+                </li>
+                <li> {{#if logged_in}}
+                    <a href="/profile">Profile</a> |
+                    <button class="no-button" id="logout">Logout</button>
+                    {{else}}
+                    <a href="/login">Login</a>
+                    {{/if}}
+                </li>
+            </ul>
+        </nav>
     </header>
-
     <!-- Conditionally render login or logout links -->
-    {{#if logged_in}}
-    <a href="/profile">profile</a> |
-    <button class="no-button" id="logout">logout</button>
-    {{else}}
-    <p class="login"></p>
-    <a href="/login">login</a>
-    {{/if}}
 
-    
+
     <main class="container container-fluid mt-5">
         <div class="content">
 
-        {{{body}}}
-    </div>
+            {{{body}}}
+        </div>
     </main>
 
     </div>
@@ -54,7 +48,7 @@
     {{/if}}
 
 
-    
+
     </main>
 </body>
 

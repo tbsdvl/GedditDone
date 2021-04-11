@@ -41,8 +41,8 @@ const newFormHandler = async (event) => {
   };
   
   document
-    .querySelector('.create-form')
-    .addEventListener('Create', newFormHandler);
+    .getElementById('create-form')
+    .addEventListener('submit', newFormHandler);
   
   // document
   //   .querySelector('.delete-form')

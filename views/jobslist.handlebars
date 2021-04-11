@@ -1,0 +1,23 @@
+<div class="joblist">
+    <div class="jobcard">
+        {{#each jobs}}
+        <div>
+            <h2>{{jobtitle}}</h2>
+            <ul class="liststyle">
+                <li>Company: {{company}}</li>
+                <li>Description: {{description}}</li>
+                <li>Contact Email: {{user.email}}</li>
+            </ul>
+            <p>Created by: {{user.firstname}} {{user.lastname}}</p>
+            <span for="img" aria-label="money">💲</span>
+            <label for="salary">Salary : ${{salary}}</label>
+            <p>For specific details on salary such as per hour or per project, please contact the job seeker via
+                email.</p>
+            <a href="mailto:{{user.email}}"><button id="hirebtn" class="btn btn-primary">Hire</button></a>
+            <br>
+            <br>
+        </div>
+        <br>
+        {{/each}}
+    </div>
+</div>
