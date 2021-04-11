@@ -6,7 +6,7 @@ const Database = require("../models");
 passport.use(
   // Sign in not using uername but only email plus password
   new LocalStrategy(
-    { usernameSpot: "email" },
+    { usernameSpot: 'email' },
 
     // Runs when user is signing in
     (email, password, complete) => {
@@ -14,27 +14,26 @@ passport.use(
         (DatabaseUser) => {
           // When in case there is no user under the email provided... msg below will display
           if (!DatabaseUser) {
-            return complete(null, false, { msg: "Wrong email address." });
+            return complete(null, false, { msg: 'Wrong email address.' });
           }
 
           // When in case there is a user under the email provided but the password provided is wrong... msg below will display
           else if (!DatabaseUser.correctPassword(password)) {
-            return complete(null, false, { msg: "Wrong password." });
+            return complete(null, false, { msg: 'Wrong password.' });
           }
           // If all of the above doesn't happen... return the user.
           return complete(null, DatabaseUser);
         }
       );
     }
-  )
-);
+  ));
 
 // User can sign up by creating an account with email..
 passport.use(
-  "create-account",
+  'create-account',
   // User can sign in not using uername but only email plus password
   new LocalStrategy(
-    { usernameSpot: "email" },
+    { usernameSpot: 'email' },
 
     // Runs when user is signing in
     (email, complete) => {
@@ -43,7 +42,7 @@ passport.use(
           // When in case there is no user under the email provided... msg below will display
           if (!DatabaseUser) {
             return complete(null, false, {
-              msg: "The email address is already in use.",
+              msg: 'The email address is already in use.',
             });
           }
           // If all of the above doesn't happen... return the user.
