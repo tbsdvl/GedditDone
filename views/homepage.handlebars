@@ -1,8 +1,8 @@
 <!-- Loop over each object in the jobs array -->
-{{#each jobs as |job| }}
 <div class="row mb-4 job">
 <section class="jobhero">
     <section class="recentjobs">
+      {{#each jobs as |job| }}
         <div class="jobpost">
             <h2 class="postheader"><a href="/job/{{job.id}}">{{job.jobtitle}}</a>
                 <div class="postcontent">
@@ -15,8 +15,8 @@
                     <h6>To contact {{job.user.firstname}}, please log in. </h6>
                 </div>
         </div>
+           {{/each}}
         </div>
-        {{/each}}
 
 <div class="contentwrap">
         <section class="description">
