@@ -2,15 +2,16 @@ const newFormHandler = async (event) => {
     event.preventDefault();
   
     const jobtitle = document.querySelector('#job-title').value.trim();
+    const company = document.querySelector('#company').value.trim();
     const salary = document.querySelector('#salary').value.trim();
     const description = document.querySelector('#job-desc').value.trim();
     const city = document.querySelector('#theCity').value.trim();
     const state = document.querySelector('#state').value.trim();
   
-    if (jobtitle && salary && description && city && state) {
+    if (jobtitle && salary && description && city && state && company) {
       const response = await fetch(`/api/jobs`, {
         method: 'POST',
-        body: JSON.stringify({ jobtitle, salary, description, city, state }),
+        body: JSON.stringify({ jobtitle, salary, description, city, state, company }),
         headers: {
           'Content-Type': 'application/json',
         },

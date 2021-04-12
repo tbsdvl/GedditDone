@@ -1,76 +1,81 @@
 <!-- Loop over each object in the jobs array -->
 <div class="row mb-4 job">
-<section class="jobhero">
-    <section class="recentjobs">
-      {{#each jobs as |job| }}
-        <div class="jobpost">
-            <h2 class="postheader"><a href="/api/jobs/{{job.id}}">{{job.jobtitle}}</a>
-                <div class="postcontent">
+    <section class="jobhero">
+        <section class="recentjobs">
+            {{#each jobs as |job| }}
+            <div class="jobpost">
+                <h2 class="postheader"><a href="/api/jobs/{{job.id}}">{{job.jobtitle}}</a>
+                    <div class="postcontent">
 
-                    <p class="job-title">Job Seeker: {{job.user.firstname}}</p>
-                    <h6> May this person help you with what you need?</h6>
-                    <br />
-                    <p>Description:</p>
-                    <p>{{job.description}}</p>
-                    <h6>To contact {{job.user.firstname}}, please log in. </h6>
-                </div>
-        </div>
-           {{/each}}
-        </div>
+                        <p class="job-title">Job Seeker: {{job.user.firstname}}</p>
+
+                        <br />
+                        <p>Company:</p>
+                        <p>{{job.company}}</p>
+                        <p>Description:</p>
+                        <p>{{job.description}}</p>
+                        <h6>To contact {{job.user.firstname}}, please log in. </h6>
+                    </div>
+            </div>
+            {{/each}}
+</div>
 
 <div class="contentwrap">
-        <section class="description">
+    <section class="description">
         <div class="mission">
             <h2>Website Mission</h2>
             <h3>Brief Explanation</h3>
             <p>
-                This app was designed with the goal to help job seekers and employers to connect in an easy and straightforward manner. This will allow the user, either the employer or the job seeker, to create an account where they will be able to connect and get the job done. Based on this idea, the website Gedditdone.com was developed. 
+                This app was designed with the goal to help job seekers and employers to connect in an easy and
+                straightforward manner. This will allow the user, either the employer or the job seeker, to create an
+                account where they will be able to connect and get the job done. Based on this idea, the website
+                Gedditdone.com was developed.
             </p>
-        </section>
-        <div class="industryphoto">
-            <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
-                alt="construction" width="600px" height="450px" />
-        </div>
-    </div>
-    </div>
-    <section class="categorywrap">
-        <div class="row mb-4 job">
-            <ul class="categories">
-                <li>
-                    <h2 class="gencat">Categories</h2>
-                </li>
-                <li>
-                    <h2 class="cat1">Category 1</h2>
-                </li>
-                <li>
-                    <h2 class="cat2">Category 2</h2>
-                </li>
-                <li>
-                    <h2 class="cat3">Category 3</h2>
-                </li>
-                <li>
-                    <h2 class="cat4">Category 4</h2>
-                </li>
-            </ul>
-        </div>
-        <section class="catdesc">
-            <div class="categoryinfo">
-                <h3>Categories and sub-classes</h3>
-                <br />
-                <p>
-                    A list of a general category's sub-classes (i.e. Marketing ->
-                    Online Promotions, E-Commerce Market Research, Market Reporting)
-                    is displayed in this area. If a user wants to view a general or
-                    specified category they may click on the general category's banner
-                    at the top or click on a sub-class listed here.
-                </p>
-            </div>
-            <aside class="categorypic">
-                <img src="https://images.unsplash.com/photo-1503387837-b154d5074bd2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2689&q=80"
-                    alt="designing" width="100%" height="100%" />
-            </aside>
-        </section>
     </section>
-    <footer>
-        <p>Website info</p>
-    </footer>
+    <div class="industryphoto">
+        <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+            alt="construction" width="600px" height="450px" />
+    </div>
+</div>
+</div>
+<section class="categorywrap">
+    <div class="row mb-4 job">
+        <ul class="categories">
+            <li>
+                <h2 class="gencat">Categories</h2>
+            </li>
+            <li>
+                <h2 class="cat1">Category 1</h2>
+            </li>
+            <li>
+                <h2 class="cat2">Category 2</h2>
+            </li>
+            <li>
+                <h2 class="cat3">Category 3</h2>
+            </li>
+            <li>
+                <h2 class="cat4">Category 4</h2>
+            </li>
+        </ul>
+    </div>
+    <section class="catdesc">
+        <div class="categoryinfo">
+            <h3>Categories and sub-classes</h3>
+            <br />
+            <p>
+                A list of a general category's sub-classes (i.e. Marketing ->
+                Online Promotions, E-Commerce Market Research, Market Reporting)
+                is displayed in this area. If a user wants to view a general or
+                specified category they may click on the general category's banner
+                at the top or click on a sub-class listed here.
+            </p>
+        </div>
+        <aside class="categorypic">
+            <img src="https://images.unsplash.com/photo-1503387837-b154d5074bd2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2689&q=80"
+                alt="designing" width="100%" height="100%" />
+        </aside>
+    </section>
+</section>
+<footer>
+    <p>Website info</p>
+</footer>
