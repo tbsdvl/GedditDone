@@ -3,6 +3,7 @@
     <section class="jobhero">
         <section class="recentjobs">
             {{#each jobs as |job| }}
+            {{#if (gt job.id 3)}}
             <div class="jobpost">
                 <h2 class="postheader"><a href="/api/jobs/{{job.id}}">{{job.jobtitle}}</a>
                     <div class="postcontent">
@@ -17,6 +18,7 @@
                         <h6>To contact {{job.user.firstname}}, please log in. </h6>
                     </div>
             </div>
+            {{/if}}
             {{/each}}
 </div>
 
