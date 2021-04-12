@@ -1,6 +1,5 @@
 const router = require("express").Router();
-const { User } = require("../../models");
-const validator = require("validator");
+const User = require("../../models");
 const passport = require("../config/passport");
 
 // At the success of login, send user to those who already have account
