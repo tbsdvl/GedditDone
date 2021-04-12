@@ -1,11 +1,6 @@
 const router = require("express").Router();
-<<<<<<< HEAD
 const User = require("../../models");
 const passport = require("../config/passport");
-=======
-const { User } = require("../../models");
-const validator = require("validator");
->>>>>>> 7c37c00917cb3c4c4e9d87a1c4a75b5f19fe4dbf
 
 router.post("/", async (req, res) => {
   try {
