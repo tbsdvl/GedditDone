@@ -6,6 +6,8 @@
     <h3>Create a New Job Posting:</h3>
         <label for="job-title">Type of Job:</label>
         <input class="form-input" type="text" id="job-title" name="job-title" />
+        <label for="company">Company(if Applicable):</label>
+        <input class="form-input" type="text" id="company" name="company" />
         <label for="salary">Rate/Hour($):</label>
         <input class="form-input" type="number" id="salary" name="salary" />
         <label for="job-desc">description:</label>
@@ -25,7 +27,7 @@
     {{#each jobs as |job|}}
     <div class="row mb-2">
       <div class="col-md-8">
-        <h4><a href="/job/{{job.id}}">{{job.jobtitle}}</a></h4>
+        <h4><a href="/api/jobs/{{job.id}}">{{job.jobtitle}}</a></h4>
       </div>
       <div class="col-md-4 delete-form">
         <button class="btn btn-sm btn-danger" data-id="{{job.id}}">DELETE</button>
