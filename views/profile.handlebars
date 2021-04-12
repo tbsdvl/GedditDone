@@ -1,37 +1,22 @@
-<div class="row">
-  <div class="col-auto">
-    <h2>Welcome, {{firstname}}!</h2>
-  </div>
-</div>
 
-<div class="row mt-4">
-  <div class="col-md-6">
-    <h3>Create a New Job Posting:</h3>
+<div id="create-form" class="loginforms">
 
     <form class="form new-job-form">
-      <div class="form-group">
+      <h2>Welcome, {{firstname}}!</h2>
+    <h3>Create a New Job Posting:</h3>
         <label for="job-title">Type of Job:</label>
         <input class="form-input" type="text" id="job-title" name="job-title" />
-      </div>
-      <div class="form-group">
+        <label for="company">Company(if Applicable):</label>
+        <input class="form-input" type="text" id="company" name="company" />
         <label for="salary">Rate/Hour($):</label>
         <input class="form-input" type="number" id="salary" name="salary" />
-      </div>
-      <div class="form-group">
         <label for="job-desc">description:</label>
         <textarea class="form-input" id="job-desc" name="job-desc"></textarea>
-      </div>
-      <div class="form-group">
         <label for="city">City:</label>
         <input class="form-input" type="text" id="theCity" name="city" />
-      </div>
-      <div class="form-group">
         <label for="state">State:</label>
         <input class="form-input" type="text" id="state" name="state" />
-      </div>
-      <div class="create-form">
         <button type="submit" class="btn btn-primary">Create</button>
-      </div>
     </form>
   </div>
 
@@ -42,7 +27,7 @@
     {{#each jobs as |job|}}
     <div class="row mb-2">
       <div class="col-md-8">
-        <h4><a href="/job/{{job.id}}">{{job.jobtitle}}</a></h4>
+        <h4><a href="/api/jobs/{{job.id}}">{{job.jobtitle}}</a></h4>
       </div>
       <div class="col-md-4 delete-form">
         <button class="btn btn-sm btn-danger" data-id="{{job.id}}">DELETE</button>

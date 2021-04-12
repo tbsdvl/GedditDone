@@ -2,15 +2,16 @@ const newFormHandler = async (event) => {
     event.preventDefault();
   
     const jobtitle = document.querySelector('#job-title').value.trim();
+    const company = document.querySelector('#company').value.trim();
     const salary = document.querySelector('#salary').value.trim();
     const description = document.querySelector('#job-desc').value.trim();
     const city = document.querySelector('#theCity').value.trim();
     const state = document.querySelector('#state').value.trim();
   
-    if (jobtitle && salary && description && city && state) {
+    if (jobtitle && salary && description && city && state && company) {
       const response = await fetch(`/api/jobs`, {
         method: 'POST',
-        body: JSON.stringify({ jobtitle, salary, description, city, state }),
+        body: JSON.stringify({ jobtitle, salary, description, city, state, company }),
         headers: {
           'Content-Type': 'application/json',
         },
@@ -28,7 +29,7 @@ const newFormHandler = async (event) => {
     if (event.target.hasAttribute('data-id')) {
       const id = event.target.getAttribute('data-id');
   
-      const response = await fetch(`/api/job/${id}`, {
+      const response = await fetch(`/api/jobs/${id}`, {
         method: 'DELETE',
       });
   
@@ -41,12 +42,12 @@ const newFormHandler = async (event) => {
   };
   
   document
-    .querySelector('.create-form')
-    .addEventListener('Create', newFormHandler);
+    .getElementById('create-form')
+    .addEventListener('submit', newFormHandler);
   
-  // document
-  //   .querySelector('.delete-form')
-  //   .addEventListener('DELETE', delButtonHandler);
+  document
+    .querySelector('.job-list')
+    .addEventListener('click', delButtonHandler);
   
   
     

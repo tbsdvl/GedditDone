@@ -1,5 +1,8 @@
 # GedditDone
 
+# Link to Application
+[Link](https://gedditdone.herokuapp.com/)
+
 # Description
 This is an application that connects employers and job seekers. This app will allow the employers to view a list of services that job seekers provide. The employers may connect with the job seeker by the email provided on their service post. 
 The job seekers will be able to create an account profile, which will include a current photo of themselves. This will help the employer to identify who they are hiring once they show up to the work location. 
@@ -43,12 +46,6 @@ GedditDone-Post Update Page
 
 GedditDone- Post Delete Page
 
-
-
-
-# APIs
-Open Skills API
-indeed open API
 
 # Tasks Breakdown
 Hanna:  Models-User, Routes-Index, View-All(TBD) 

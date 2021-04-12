@@ -1,24 +1,19 @@
-<div class="job-details-container">
-  <div class="card-header col-md-10">
-    <h2>
-    Job Listing
-    </h2>
-  </div>
-  <section class="card">
-  <!-- The contents of this card links to the jobs page using the user ID -->
-  <a href="/jobs/{{id}}">
-    <!-- The card contains the jobstitle as the card header -->
-    <header>{{jobtitle}}</header>
-    <!-- The card contains the first user of the jobs -->
-    <img src="/images/{{user.[0].firstname}}{{user.[0].lastname}}" alt="{{user.[0].email}}">
-  </a>
-</section>
-   <section class="user">
-  <img src="/images/{{user.firstname}}{{user.lastname}}" alt="{{user.email}}">
-  <div class="user-details">
-    
-  </div>
-</section>
-    </div>
-  </div>
-</div>
+<div class=" card shadow rounded bg-dark text-white greenborder mb-4">
+        <div class="card-body">
+          <div class="row">
+
+            <h4 class="ml-3 job-title">{{this.jobtitle}}</h4>
+            
+          <p class="mb-1 company"><strong>{{this.company}}</strong></p>
+
+          <p class="mb-1 desc">Description : <span class="text-info">{{this.description}}</span></p>
+          <p class="mb-1 job-city">Job City : <span class="text-info">{{this.city}}</span></p>
+           <p class="mb-1 job-state">Job State : <span class="text-info">{{this.state}}</span></p>
+          <p class="mb-1 salary">Salary : <span class="text-info">{{this.salary}}</span></p>
+
+          
+          <div>
+            <a class='email' href="mailto:{{this.email}}" class="btn btn-md btn-info mb-2 mt-1">Contact</a>
+          </div>
+        </div>
+      </div>
