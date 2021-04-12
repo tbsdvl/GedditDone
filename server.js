@@ -1,5 +1,8 @@
+require('dotenv').config();
 const path = require('path');
 const express = require('express');
+//allows to send http requests
+const axios = require('axios');
 // Import express-session
 const session = require('express-session');
 const exphbs = require('express-handlebars');
@@ -10,6 +13,20 @@ const helpers = require('./utils/helpers');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
+
+const reedURL='https://www.reed.co.uk/api/1.0/search?api_key='
++process.env.REED_API_KEY;
+
+app.get('/search/reed.co.uk/api/1.0/search?keywords=/:query', async function(req, res){
+    try{
+    const {data} = await axios.get(reedURL + "&q=" + req.params.query);
+    res.json(data);
+    }
+    catch(err){
+        console.log(err);
+    }
+});
+
 
 // Set up sessions
 const sess = {
