@@ -23,15 +23,15 @@
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="/api/jobs">Find a Job</a></li>
-                <li><a href="/profile">Post a Job</a></p>
-                </li>
-                <li> {{#if logged_in}}
-                    <a href="/profile">Profile</a>
-                    <button class="no-button" id="logout">Logout</button>
+                <li><a href="/profile">Post a Job</a></p></li>
+                {{#if logged_in}}
+                <div>
+                    <li><a href="/profile">Profile</a></li>
+                    <li><button class="no-button" id="logout">Logout</button></li>
                     {{else}}
-                    <a href="/login">Login</a>
+                    <li><a href="/login">Login</a></li>
                     {{/if}}
-                </li>
+                </div>
           </ul>
     </nav>
     </header>

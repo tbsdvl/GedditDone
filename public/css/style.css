@@ -45,6 +45,11 @@ nav ul a {
     color: white;
 }
 
+nav ul li button {
+    font-size: medium;
+    padding: 5px;
+}
+
 .login {
     color: black;
    
@@ -61,6 +66,7 @@ nav ul a {
     background-image: url(https://images.unsplash.com/photo-1574728456255-59a286f7aaf2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1951&q=80);
     padding-top: 163px;
     padding-bottom: 154px;
+    background-repeat: no-repeat;
 }
 
 .recentjobs {
@@ -271,7 +277,7 @@ footer p {
 .jobcard h2 {
     background-color: #ff4800;
     color: #fff;
-    width: 100%;
+    width: 60%;
     text-align: center;
     margin: 0;
     border: 3px solid #000;
@@ -280,6 +286,9 @@ footer p {
     text-align: center;
 }
 
+.jobcard div h2 {
+    width: 100%;
+}
 .liststyle {
     list-style-type: none;
     margin: 0;
@@ -293,4 +302,128 @@ footer p {
     text-align: center;
     font-size: large;
     padding: 0px;
+}
+
+@media screen and (max-width: 1193px){
+
+    .categories {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 977px){
+
+    .jobhero {
+        background-image: linear-gradient(to top left, #ff8c5e, #ffbc7d, #fff);
+        height: 100%;
+        width: 100%;
+        background-repeat: no-repeat;
+        padding: 0;
+    }
+
+    nav ul li {
+        font-size: medium;
+    }
+
+    .recentjobs {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        padding-top: 150px;
+    }
+
+    .jobpost {
+        width: 50%;
+        height: 100%;
+    }
+
+    .jobcard {
+        padding-top: 200px;
+        width: 150%;
+    }
+
+    .jobcard div {
+        font-size: medium;
+    }
+
+    .contentwrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .industryphoto {
+        text-align: center;
+    }
+
+    .industryphoto img {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 500px){
+
+    header {
+        background-color: #A52F00;
+        width: 100%;
+        height: 150px;
+        margin: 0;
+        padding:0;
+        z-index: 2;
+        align-items: center;
+    }
+
+    header h1 {
+        font-size: medium;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    nav ul li {
+        font-size: small;
+    }
+
+
+    .catdesc {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 458px){
+
+        header {
+            background-color: #A52F00;
+            width: 100%;
+            height: 150px;
+            margin: 0;
+            padding:0;
+            z-index: 2;
+            align-items: center;
+        }
+    
+        header h1 {
+            font-size: medium;
+        }
+    
+        nav ul {
+            display: flex;
+            flex-direction: column;
+        }
+    
+        nav ul li {
+            font-size: small;
+        }
+    
+    
+        .catdesc {
+            display: flex;
+            flex-direction: column;
+        }
 }

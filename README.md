@@ -1,7 +1,7 @@
 # GedditDone
 
 # Link to Application
-[Link](https://gedditdone.herokuapp.com/)
+[Heroku Deployed Application](https://gedditdone.herokuapp.com/)
 
 # Description
 This is an application that connects employers and job seekers. This app will allow the employers to view a list of services that job seekers provide. The employers may connect with the job seeker by the email provided on their service post. 
