@@ -45,6 +45,11 @@ nav ul a {
     color: white;
 }
 
+nav ul li button {
+    font-size: medium;
+    padding: 5px;
+}
+
 .login {
     color: black;
    
@@ -272,7 +277,7 @@ footer p {
 .jobcard h2 {
     background-color: #ff4800;
     color: #fff;
-    width: 100%;
+    width: 60%;
     text-align: center;
     margin: 0;
     border: 3px solid #000;
@@ -281,6 +286,9 @@ footer p {
     text-align: center;
 }
 
+.jobcard div h2 {
+    width: 100%;
+}
 .liststyle {
     list-style-type: none;
     margin: 0;
@@ -327,6 +335,15 @@ footer p {
         height: 100%;
     }
 
+    .jobcard {
+        padding-top: 200px;
+        width: 150%;
+    }
+
+    .jobcard div {
+        font-size: medium;
+    }
+
     .contentwrap {
         display: flex;
         flex-direction: column;
@@ -343,7 +360,7 @@ footer p {
 
 }
 
-@media screen and (max-width: 774px){
+@media screen and (max-width: 794px){
 
     header {
         background-color: #A52F00;
@@ -367,6 +384,7 @@ footer p {
     nav ul li {
         font-size: small;
     }
+
 
     .catdesc {
         display: flex;
