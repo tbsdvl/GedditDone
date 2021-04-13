@@ -396,7 +396,7 @@ footer p {
     }
 }
 
-@media screen and (max-width: 300px){
+@media screen and (max-width: 458px){
 
         header {
             background-color: #A52F00;
