@@ -322,6 +322,10 @@ footer p {
         padding: 0;
     }
 
+    nav ul li {
+        font-size: medium;
+    }
+
     .recentjobs {
         display: flex;
         flex-direction: column;
@@ -360,7 +364,7 @@ footer p {
 
 }
 
-@media screen and (max-width: 794px){
+@media screen and (max-width: 500px){
 
     header {
         background-color: #A52F00;
